@@ -1,0 +1,4 @@
+- form para compra de ticket
+- modal javascript
+- interação do javascript
+- design com tailwind
