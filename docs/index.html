@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -42,37 +42,90 @@
                 <h1 class="text-2xl font-semibold md:text-3xl">Buy a ticket | Interlagos</h1>
             </header>
 
-            <form action="#" class="flex flex-col">
+            <div id="message" class="hidden px-4 py-2  mt-2 mb-1">
+            </div> 
+
+            <form action="checkout.html" class="flex flex-col">
                 <div id="name" class="flex flex-col relative w-full">
-                    <span class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1" style="font-size: 2rem">account_circle</span>
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1"
+                        style="font-size: 2rem">account_circle</span>
                     <input type="text" id="nameClient" name="nameClient" placeholder="Full Name"
-                    class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
-                </div>
-
-                <div id="email" class="flex flex-col relative w-full">
-                    <span class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1" style="font-size: 2rem">mail</span>
-                    <input type="email" id="emailClient" name="emailClient" placeholder="user@gmail.com"
-                    class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
-                </div>
-
-                <div id="number" class="flex flex-col relative w-full">
-                    <span class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1" style="font-size: 2rem">phone</span>
-                    <input type="text" id="numberPhone" name="numberPhone" placeholder="Number Phone"
-                    class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
+                        class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
+                       
                 </div>
 
                 <div id="cpf" class="flex flex-col relative w-full">
-                    <span class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1" style="font-size: 2rem">credit_card</span>
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1"
+                        style="font-size: 2rem">credit_card</span>
                     <input type="text" id="cpfClient" name="cpfClient" placeholder="CPF"
-                    class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
+                        class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
                 </div>
 
-                <div class="flex items-center border border-gray-300 rounded-xl w-fit overflow-hidden">
+                <div id="email" class="flex flex-col relative w-full">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1"
+                        style="font-size: 2rem">mail</span>
+                    <input type="email" id="emailClient" name="emailClient" placeholder="user@gmail.com"
+                        class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
+                </div>
 
+                <div id="number" class="flex flex-col relative w-full">
+                    <span
+                        class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1"
+                        style="font-size: 2rem">phone</span>
+                    <input type="text" id="numberPhone" name="numberPhone" placeholder="Number Phone"
+                        class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
+                </div>
+
+                <div id="quatityTickets" class="mt-5 flex w-full justify-between items-center">
+                    <h2>Quantity
+                        Tickets:</h2>
+                    <div class="flex items-center border border-gray-300 rounded-xl  overflow-hidden">
+
+    <button id="removeQtd" type="button" class="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-red-600 font-bold transition">
+        -
+    </button>
+
+    <input id="valueQtd"
+      type="number" 
+      value="1" 
+      class="w-full text-center border-none focus:ring-0 font-bold text-gray-700 [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+    >
+
+    <button id="addQtd" type="button" class="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-green-600 font-bold transition">
+        +
+    </button>
     
 </div>
+                </div>
+
+                <div class="flex justify-center items-center
+                mt-8 
+                w-full h-0.5
+                bg-gray-200 ">
+                </div>
+
+                <div id="totalCost" class="flex flex-col gap-1.5 mt-4">
+                    <div class="">
+                        <h2 class="text-red-600">Price for Ticket: <span class="text-black">$</span><span id="priceTicket" class="text-black">0</span></h2>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-semibold">Total Cost: $<span id="totalCostValue" class="text-black">0</span></h1>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center items-center
+                mt-4 
+                w-full h-0.5
+                bg-gray-200 ">
+                </div>
+
             </form>
-            <button type="submit" class="bg-red-600 text-white p-3 w-full mt-8 rounded-xl transition-all hover:-translate-y-2 hover:shadow-[0px_10px_0px_-0px_rgb(96,0,0)]">Realizar Compra</button>
+            <button type="submit"
+                class="bg-red-600 text-white p-3 w-full mt-8 rounded-xl transition-all hover:-translate-y-2 hover:shadow-[0px_10px_0px_-0px_rgb(96,0,0)]">Realizar
+                Compra</button>
 
         </div>
 
