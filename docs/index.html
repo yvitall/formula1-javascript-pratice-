@@ -19,7 +19,7 @@
 
 </head>
 
-<body class="font-[Racing_Sans_One] flex flex-col min-h-screen overflow-x-hidden">
+<body class="font-[Space_Grotesk] flex flex-col min-h-screen overflow-x-hidden">
 
     <div id="backgroundF1" class="fixed -z-20 w-full h-full">
         <img src="assets/Largada-GP-de-Monaco-Corrida-Formula-1-2-scaled-aspect-ratio-512-320.webp" alt="background-f1"
@@ -39,7 +39,7 @@
 
             <header class="flex flex-col justify-center items-center mb-1">
                 <img src="assets/F1.svg.png" alt="logo-f1" class="h-10 mb-5">
-                <h1 class="text-2xl md:text-3xl">Buy a ticket | Interlagos</h1>
+                <h1 class="text-2xl font-semibold md:text-3xl">Buy a ticket | Interlagos</h1>
             </header>
 
             <form action="#" class="flex flex-col">
@@ -48,7 +48,31 @@
                     <input type="text" id="nameClient" name="nameClient" placeholder="Full Name"
                     class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
                 </div>
+
+                <div id="email" class="flex flex-col relative w-full">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1" style="font-size: 2rem">mail</span>
+                    <input type="email" id="emailClient" name="emailClient" placeholder="user@gmail.com"
+                    class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
+                </div>
+
+                <div id="number" class="flex flex-col relative w-full">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1" style="font-size: 2rem">phone</span>
+                    <input type="text" id="numberPhone" name="numberPhone" placeholder="Number Phone"
+                    class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
+                </div>
+
+                <div id="cpf" class="flex flex-col relative w-full">
+                    <span class="material-symbols-outlined absolute left-3 top-1/2 transition -translate-y-1.5 pointer-events-none text-red-600 -ml-1" style="font-size: 2rem">credit_card</span>
+                    <input type="text" id="cpfClient" name="cpfClient" placeholder="CPF"
+                    class="font-[Space_Grotesk] pl-11 mt-5 p-3 rounded-xl border-2 border-red-600 focus:outline-none focus:ring-2 focus:ring-gray-400/50">
+                </div>
+
+                <div class="flex items-center border border-gray-300 rounded-xl w-fit overflow-hidden">
+
+    
+</div>
             </form>
+            <button type="submit" class="bg-red-600 text-white p-3 w-full mt-8 rounded-xl transition-all hover:-translate-y-2 hover:shadow-[0px_10px_0px_-0px_rgb(96,0,0)]">Realizar Compra</button>
 
         </div>
 
